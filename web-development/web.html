@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Images</title>
+<style>
+   .heading{
+      text-align: center;
+   }
+  .image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+  }
+  .image-container img {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    border: 0.59px solid black;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+</style>
+</head>
+<body>
+<h1 class="heading">Select Doctor</h1>
+<div class="image-container" id="gallery"></div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const images = [
+      { "image": "a/images.png"},
+      { "image": "a/images1.jpeg"},
+      {"image": "a/images2.jpeg"},
+      {"image": "a/images3.jpeg"},
+      {"image": "a/images4.jpeg"},
+      {"image": "a/images5.jpeg"},
+      {"image": "a/images6.jpeg"},
+      {"image": "a/images7.jpeg"},
+      {"image": "a/images8.jpeg"},
+      {"image": "a/images9.jpeg"},
+      {"image": "a/images10.jpeg"},
+      {"image": "a/images.png"},
+      {"image": "a/images1.jpeg"},
+      {"image": "a/images2.jpeg"},
+      {"image": "a/images3.jpeg"},
+      {"image": "a/images4.jpeg"},
+      {"image": "a/images5.jpeg"},
+      {"image": "a/images6.jpeg"},
+      {"image": "a/images7.jpeg"},
+      {"image": "a/images8.jpeg"},
+      {"image": "a/images9.jpeg"},
+      {"image": "a/images10.jpeg"},
+      {"image": "a/images.png"},
+      {"image": "a/images1.jpeg"},
+      {"image": "a/images2.jpeg"},  
+    ];
+
+    const gallery = document.getElementById('gallery');
+
+    images.forEach((image, index) => {
+      const img = document.createElement('img');
+      img.src = image.image;
+      img.alt = `Image ${index + 1}`;
+      img.loading = 'lazy';
+      gallery.appendChild(img);
+    });
+  });
+</script>
+
+</body>
+</html>
